@@ -1,7 +1,5 @@
-# recharge_ad
-
-> 自动充值系统-B端
-
+# admin
+> 后台管理系统
 ## Build Setup
 
 ``` bash

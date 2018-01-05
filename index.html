@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>智能物流管理系统-e车e站</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="renderer" content="webkit|ie-comp|ie-stand">
+<link rel="icon" href="/favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+<link rel="stylesheet" href="/static/css/base.css">
+<meta name="author" content="">
+<meta name="keywords" content="">
+<meta name="description" content="">
+<style type="text/css">
+.popup { width: 500px; height: 360px; margin: -180px 0 0 -250px; border: 10px solid #2d2d2d; position: absolute; left: 50%; top: 50%; background: #fff; border-radius: 10px; }
+.popup .browser { margin: 0; padding: 0 10px; list-style: none; }
+.popup .browser li { width: 25%; margin: 0; padding: 0; font-size: 12px; float: left; }
+.popup .browser li span { text-align: center; display: block; }
+.popup .browser li img { width: 90px; height: 90px; border: 0; }
+.popup .browser li em { display: block; vertical-align: top; text-align: center; line-height: 22px; font-style: normal; font-family: "microsoft yahei"; }
+.popup .browser li a { text-decoration: none; color: #000; border: 0; }
+.popup .title { margin: 0; padding: 40px 20px 20px; font-size: 16px; text-align: left; font-weight: 700; font-family: "microsoft yahei"; }
+.popup .note { margin: 0; padding: 0 20px 100px; text-align: justify; font-size: 14px; font-weight: 700; line-height: 26px; font-family: "microsoft yahei"; }
+</style>
+</head>
+<body>
+<div id="app"></div>
+<script type="text/javascript" async="async" src="/static/js/echarts.common.min.js"></script>
+<!-- built files will be auto injected -->
+<script type="text/javascript">
+window.onload = function (){
+	if(BrowserType() == 'IE9' || BrowserType() == 'IE8' || BrowserType() == 'IE7' || BrowserType() == 'IE6') {
+        var app = document.getElementById('app')
+        app.style.display = 'none';
+		var wrap = document.createElement('div');
+		wrap.className = 'popup';
+		var browserEle = '<h1 class="title">系统检测到您的浏览器相对古老，系统暂不支持该浏览器！</h1><p class="note">为了得到网站的最好体验效果，我们建议您升级到最新版本的Internet Explorer或选择另一个WEB浏览器，一个浏览器列表供您下载！</p><ul class="browser"><li><a href="http://sw.bos.baidu.com/sw-search-sp/software/e80aba170ee7c/ChromeStandalone_62.0.3202.94_Setup.exe"><span><img src="static/image/browser_2.png" alt=""></span><em>chrome 浏览器</em></a></li><li><a href="http://sw.bos.baidu.com/sw-search-sp/software/29626b2c5cc2d/EOIE9-WindowsXP-x86.exe"><span><img src="static/image/browser_1.png" alt=""></span><em>IE10+ 浏览器</em></a></li><li><a href="https://dldir1.qq.com/invc/tt/QQBrowser_Setup_SEM1.exe"><span><img src="static/image/browser_3.png" alt=""></span><em>QQ 浏览器</em></a></li><li><a href="http://down.360safe.com/se/360se9.1.0.358.exe"><span><img src="static/image/browser_4.png" alt=""></span><em>360 浏览器</em></a></li></ul>';
+		wrap.innerHTML = browserEle;
+		document.body.appendChild(wrap)
+	}
+}
+function BrowserType() {
+    var userAgent = navigator.userAgent;
+    var isOpera = userAgent.indexOf("Opera") > -1;
+    var isIE = userAgent.indexOf("compatible") > -1 && userAgent.indexOf("MSIE") > -1 && !isOpera;
+    var isEdge = userAgent.indexOf("Windows NT 6.1; Trident/7.0;") > -1 && !isIE;
+    var isFF = userAgent.indexOf("Firefox") > -1;
+    var isSafari = userAgent.indexOf("Safari") > -1 && userAgent.indexOf("Chrome") == -1;
+    var isChrome = userAgent.indexOf("Chrome") > -1 && userAgent.indexOf("Safari") > -1;
+
+    if (isIE) {
+        var reIE = new RegExp("MSIE (\\d+\\.\\d+);");
+        reIE.test(userAgent);
+        var fIEVersion = parseFloat(RegExp["$1"]);
+        if (fIEVersion == 6) { 
+        	return "IE6"; 
+        } else if (fIEVersion == 7) { 
+        	return "IE7"; 
+        } else if (fIEVersion == 8) { 
+            return "IE8"; 
+        } else if (fIEVersion == 9) {
+            return "IE9"; 
+        } else if (fIEVersion == 10) { 
+            return "IE10"; 
+        } else if (fIEVersion == 11) { 
+            return "IE11"; 
+        } else { 
+            return "0" 
+      }
+    }
+    if (isFF) { return "FF"; }
+    if (isOpera) { return "Opera"; }
+    if (isSafari) { return "Safari"; }
+    if (isChrome) { return "Chrome"; }
+    if (isEdge) { return "Edge"; }
+}
+</script>
+</body>
+</html>

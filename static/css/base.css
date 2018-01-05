@@ -1,0 +1,92 @@
+/**
+ * base
+ */
+body{font:14px/22px "microsoft yahei","simsun",Arial; background: #f9fafc;}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,blockquote,p{padding:0px; margin:0px;}
+table{margin:0px auto;}
+img{vertical-align:top; border:0px;}
+ol,ul{list-style:none;}
+li{list-style-type:none;}
+h1,h2,h3,h4,h5,h6{font-size:12px; font-weight:normal;}
+address,caption,cite,code,dfn,em,i,b{font-weight:normal; font-style:normal;}
+a{color:#000; text-decoration:none; outline:none;}
+a:hover{color:#000;text-decoration:none;}
+input,button{outline: none;}
+input:-webkit-autofill {
+	background-color: #FFF;
+	background-image: none;
+}
+
+/**
+ * text-align
+ */
+.tl{text-align:left;}.tr{text-align:right;}.tc{text-align:center;}.tb{font-weight:bold;}
+.fl{float:left;}.fr{float:right;}.f12{font-size:12px;}.f14{font-size:14px;}
+.pos{position:relative;}
+.clearfix:after{content:''; clear:both; display:block; line-height:0px; font-size:0px; height:0px; visibility:hidden;}
+.clearfix{*zoom:1;}
+.clear{clear:both; display:block; line-height:0px; font-size:0px; height:0px; visibility:hidden;}
+
+/*
+ * box-shadow
+ */
+.index .header, .index .echarts, .operate .query, .operate .content, .statistics .query, .statistics .content, .system { overflow: auto; background: #fff; -webkit-border-radius: 5px; -ms-border-radius: 5px; -o-border-radius: 5px; box-shadow: 0 0 20px 1px rgba(84,144,205,0.1); -webkit-box-shadow: 0 0 20px 1px rgba(84,144,205,0.1); -moz-box-shadow: 0 0 20px 1px rgba(84,144,205,0.1); -o-box-shadow: 0 0 20px 1px rgba(84,144,205,0.1); }
+
+/*
+ * input
+ */
+.form-item {display: inline-block; margin-right: 30px; vertical-align: top;}
+.form-item-label {text-align: right; vertical-align: middle; float: left; color: #888888; line-height: 36px; padding: 0 20px 11px 0; box-sizing: border-box;}
+.form-item-inner {min-width: 220px; display: inline-block; vertical-align: top;}
+.form-item-input {height: 36px; width: 100%; border: #eaedf6 1px solid; box-sizing: border-box; -webkit-appearance: none; -moz-appearance: none; appearance: none; background-color: #fff; background-image: none; color: #1f2d3d; outline: 0; padding: 3px 10px; transition: border-color .2s cubic-bezier(.645,.045,.355,1); font-size: 14px; line-height: 36px;}
+.form-item-input:focus {border-color: #8fabfe;}
+
+/*
+ * btn
+ */
+.button {width: 80px; height: 35px; border: none; background: #5b83fa; border-radius: 30px; -webkit-border-radius: 30px; -ms-border-radius: 30px; -o-border-radius: 20px;	color: #fff; font-size: 14px; line-height: 35px; cursor: pointer; text-align: center; box-shadow: 0 3px 8px rgba(91,131,250,0.3)}
+.button:hover{background: #3666f6;}
+.button.close {margin-right: 35px; background: #f9fafc; color: #888;}
+.button.close:hover {background: #f6f6f7;}
+
+/**
+ * box
+ */
+.boxs {height: 30px; padding: 5px 30px;}
+.boxs .add, .boxs .export, .boxs .print, .boxs .recharge { padding: 0 10px; float: left; border-right: 1px solid #f9fafc; line-height: 30px; color: #5b83fa; cursor: pointer;}
+.boxs li:last-child {border-right: 0;}
+.boxs .add::after, .boxs .export::after, .boxs .print::after, .boxs .recharge::after { content: ""; width: 14px; height: 14px; margin: 7px 10px 0 0; float: left; }
+.boxs .add::after { background: url(/static/image/addItem.png) no-repeat center center; background-size: cover;}
+.boxs .export::after{ background: url(/static/image/export.png) no-repeat center center; background-size: cover;}
+.boxs .print::after{ background: url(/static/image/print.png) no-repeat center center; background-size: cover;}
+.boxs .recharge::after{ background: url(/static/image/recharge.png) no-repeat center center; background-size: cover;}
+
+/**
+ * summary
+ */
+.summary {
+	width: 240px;
+	height: 60px;
+	margin: 20px 30px;
+	font-size: 12px;
+	background: #f9fafc;
+	color: #888;
+}
+.summary li{
+	float: left;
+	line-height: 30px;
+	text-align: center;
+}
+.summary li:nth-child(1){
+	width: 85px;
+	height: 60px;
+	font-size: 14px;
+	line-height: 60px;
+}
+.summary li:nth-child(2), .summary li:nth-child(3){
+	width: 155px;
+	background: #f0f3fd;
+}
+.summary li:nth-child(3) {
+	background: #bdcdfb;
+}
